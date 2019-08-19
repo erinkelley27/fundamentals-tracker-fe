@@ -1,10 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Livvic', sans-serif;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  /* border: solid blue 2px; */
+  margin: 0;
+  padding: 25px;
+}
+
+nav {
+  background-color: #FFDB00;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* border: solid red 2px; */
+}
+
+h3 {
+  margin: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+li {
+  background-color: #FF2834;
+  color: white;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  margin: 10px;
+}
+
+.Cohort, .CompareScores {
+  margin: 100px auto;
+  text-align: center;
 }
 
 code {

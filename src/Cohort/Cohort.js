@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 class Cohort extends Component {
+
     render() {
-        let cohorts = this.props.cohorts.map((cohort, index) => {
-            return (
-                <Link to={'/cohorts/' + cohort.cohort} key={index}>
-                    <li >{cohort.cohort}</li>
-                </Link>
-            )
+
+        let selectedCohort = this.props.cohorts.find(cohort => {
+            if (cohort.cohort === parseInt(this.props.match.params.cohort)) {
+                return cohort
+            }
         })
+
         return (
             <div className="Cohort">
-                <ul>{cohorts}</ul>
+                <h2>SEI {selectedCohort.cohort}</h2>
+                <p>Fundamentals Average: {selectedCohort.fundamentalsAvg}</p>
+                <p>JavaScript Average: {selectedCohort.javascriptAvg}</p>
+                <p>Withdrawal Rate: {selectedCohort.withdrawalRate}%</p>
+                <p>Graduation Rate: {selectedCohort.graduationRate}%</p>
             </div>
         )
     }
